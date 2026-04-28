@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mary Rose Dumada-ug — Social Media Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-container">
+      <a class="brand" href="#home">Mary Rose</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="#contact">Hire Me</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow">Social Media Manager</p>
+        <h1>Mary Rose Dumada-ug</h1>
+        <p class="lead">Results-driven Social Media Manager & Content Strategist — 7+ years creating growth-focused content, reels, and brand visuals.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#portfolio">View Work</a>
+          <a class="secondary" href="#contact">Get in touch</a>
+        </div>
+        <ul class="skills">
+          <li>Canva</li>
+          <li>HubSpot</li>
+          <li>ClickUp</li>
+          <li>Trello</li>
+          <li>Google Sheets</li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <img src="assets/hero.svg" alt="Abstract red hero graphic" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div id="filters" class="filters" aria-label="Project categories"></div>
+        <div id="gallery" class="gallery" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="bio">
+          <h3>Mary Rose Dumada-ug</h3>
+          <p class="tagline">Social Media Manager | Content Strategist | Digital Creative</p>
+          <p>I’m a results-driven Social Media Manager with over 7 years of experience in customer service, digital marketing, and content creation. I specialize in creating engaging, high-converting content that helps brands grow their online presence and connect with their audience.</p>
+          <p>With a strong background in graphic design and branding, I bring ideas to life through strategic visuals, compelling captions, and data-driven campaigns. I’ve worked with businesses across different industries—managing social media accounts, developing content calendars, and optimizing engagement through platforms like Facebook, Instagram, and more.</p>
+          <p>I’m highly skilled in tools such as Canva, HubSpot, ClickUp, Trello, and Google Sheets, allowing me to streamline workflows and deliver consistent results. My approach combines creativity, organization, and a deep understanding of audience behavior to ensure every post serves a purpose.</p>
+          <h4>What I do best:</h4>
+          <ul>
+            <li>Content planning &amp; strategy</li>
+            <li>Social media management &amp; growth</li>
+            <li>Graphic design &amp; branding</li>
+            <li>Audience engagement &amp; customer support</li>
+            <li>Campaign optimization &amp; analytics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:Hrwoork@gmail.com">Hrwoork@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/">@mary_d</a></p>
+        <p>Phone: +63 912 345 6789</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© Mary Rose Dumada-ug</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Assets discovered in your workspace
+      const assets = [
+        "Mary_D Reels & Graphics/Reels/May 22.mp4",
+        "Mary_D Reels & Graphics/Reels/june reel.mp4",
+        "Mary_D Reels & Graphics/Reels/july reel .mp4",
+        "Mary_D Reels & Graphics/Reels/July reel #3.mp4",
+        "Mary_D Reels & Graphics/Reels/Is your home ready for hurricane season.mp4",
+        "Mary_D Reels & Graphics/Reels/Feeling Cozy.mp4",
+        "Mary_D Reels & Graphics/Reels/BBQ runs deep in Houston.mp4",
+        "Mary_D Reels & Graphics/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle..png",
+        "Mary_D Reels & Graphics/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle. (1).png",
+        "Mary_D Reels & Graphics/Graphics/May.png",
+        "Mary_D Reels & Graphics/Graphics/May (1).png",
+        "Mary_D Reels & Graphics/Graphics/JUNE 27.png",
+        "Mary_D Reels & Graphics/Graphics/JUNE 21.png",
+        "Mary_D Reels & Graphics/Graphics/JUNE 12.png",
+        "Mary_D Reels & Graphics/Graphics/JUNE  11.png"
+      ];
+
+      const gallery = document.getElementById('gallery');
+      const filtersContainer = document.getElementById('filters');
+
+      const items = assets.map(p => {
+        const normalized = p.replace(/\\\\/g, '/');
+        let category = 'Other';
+        if (/\/Reels\//i.test(normalized)) category = 'Reels';
+        else if (/\/Graphics\//i.test(normalized)) category = 'Graphics';
+        return { path: normalized, category };
+      });
+
+      const categories = ['All', ...Array.from(new Set(items.map(i => i.category)))];
+
+      function renderFilters(categories) {
+        filtersContainer.innerHTML = '';
+        categories.forEach(cat => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'filter-btn' + (cat === 'All' ? ' active' : '');
+          btn.textContent = cat;
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderGallery(cat);
+          });
+          filtersContainer.appendChild(btn);
+        });
+      }
+
+      function renderGallery(category) {
+        gallery.innerHTML = '';
+        const filtered = (category === 'All') ? items : items.filter(i => i.category === category);
+        if (!filtered.length) {
+          gallery.innerHTML = '<p class="muted">No assets in this category.</p>';
+          return;
+        }
+        filtered.forEach(i => {
+          const item = document.createElement('div');
+          item.className = 'item';
+          item.setAttribute('data-category', i.category);
+          const lower = i.path.toLowerCase();
+          const ext = lower.split('.').pop().trim();
+          if (['mp4','webm','mov'].includes(ext)) {
+            const v = document.createElement('video');
+            v.src = encodeURI(i.path);
+            v.controls = true;
+            v.preload = 'metadata';
+            item.appendChild(v);
+          } else {
+            const img = document.createElement('img');
+            img.src = encodeURI(i.path);
+            img.alt = '';
+            item.appendChild(img);
+          }
+          const label = document.createElement('span');
+          label.className = 'label';
+          label.textContent = i.category;
+          item.appendChild(label);
+          gallery.appendChild(item);
+        });
+      }
+
+      renderFilters(categories);
+      renderGallery('All');
+
+      // Mobile nav toggle
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+    });
+  </script>
+</body>
+</html>
