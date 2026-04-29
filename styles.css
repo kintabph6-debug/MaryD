@@ -435,6 +435,73 @@ h2 {
   border: 1px solid var(--border);
 }
 
+/* Resume Section */
+.resume {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.resume-item {
+  margin-bottom: 40px;
+}
+
+.resume-item .eyebrow {
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.resume-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--secondary);
+}
+
+.resume-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-item ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.resume-item ul li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.skills-tags li {
+  padding-left: 0 !important;
+  margin-bottom: 16px !important;
+}
+
+.skills-tags li::before {
+  display: none !important;
+}
+
+.skills-tags strong {
+  display: block;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
 /* Testimonials */
 .testimonials { 
   padding: 100px 0; 
@@ -603,6 +670,7 @@ footer .container {
   .services .testimonial-grid { grid-template-columns: 1fr; }
   .bio ul { grid-template-columns: 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
+  .resume-grid { grid-template-columns: 1fr; gap: 0; }
 }
 
 @media (max-width: 480px) {
