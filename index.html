@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mary Rose Dumada-ug — Social Media Manager</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css" />
   <meta name="color-scheme" content="light dark">
 </head>
+
 <body>
   <nav class="site-nav">
     <div class="container nav-container">
@@ -28,12 +31,16 @@
       <div class="hero-left">
         <p class="eyebrow">Social Media Manager</p>
         <h1>Mary Rose Dumada-ug</h1>
-        <p class="lead">Results-driven Social Media Manager & Content Strategist — 7+ years creating growth-focused content, reels, and brand visuals.</p>
+        <p class="lead">Results-driven Social Media Manager & Content Strategist — 7+ years creating growth-focused
+          content, reels, and brand visuals.</p>
         <div class="hero-actions">
           <a class="cta" href="#portfolio">View Work</a>
           <a class="secondary" href="#contact">Get in touch</a>
         </div>
         <ul class="skills">
+          <li>Figma & Framer</li>
+          <li>UI/UX Design</li>
+          <li>SaaS Development</li>
           <li>Canva</li>
           <li>HubSpot</li>
           <li>ClickUp</li>
@@ -51,7 +58,10 @@
     <section class="portfolio" id="portfolio">
       <div class="container">
         <h2>Portfolio</h2>
-        <div id="projects" class="projects-grid" aria-label="Featured projects"></div>
+        <div class="swiper projects-swiper">
+          <div id="projects" class="swiper-wrapper" aria-label="Featured projects"></div>
+          <div class="swiper-pagination"></div>
+        </div>
         <div id="filters" class="filters" aria-label="Project categories"></div>
         <div id="gallery" class="gallery" aria-live="polite"></div>
       </div>
@@ -63,9 +73,16 @@
         <div class="bio">
           <h3>Mary Rose Dumada-ug</h3>
           <p class="tagline">Social Media Manager | Content Strategist | Digital Creative</p>
-          <p>I’m a results-driven Social Media Manager with over 7 years of experience in customer service, digital marketing, and content creation. I specialize in creating engaging, high-converting content that helps brands grow their online presence and connect with their audience.</p>
-          <p>With a strong background in graphic design and branding, I bring ideas to life through strategic visuals, compelling captions, and data-driven campaigns. I’ve worked with businesses across different industries—managing social media accounts, developing content calendars, and optimizing engagement through platforms like Facebook, Instagram, and more.</p>
-          <p>I’m highly skilled in tools such as Canva, HubSpot, ClickUp, Trello, and Google Sheets, allowing me to streamline workflows and deliver consistent results. My approach combines creativity, organization, and a deep understanding of audience behavior to ensure every post serves a purpose.</p>
+          <p>I’m a results-driven Social Media Manager with over 7 years of experience in customer service, digital
+            marketing, and content creation. I specialize in creating engaging, high-converting content that helps
+            brands grow their online presence and connect with their audience.</p>
+          <p>With a strong background in graphic design and branding, I bring ideas to life through strategic visuals,
+            compelling captions, and data-driven campaigns. I’ve worked with businesses across different
+            industries—managing social media accounts, developing content calendars, and optimizing engagement through
+            platforms like Facebook, Instagram, and more.</p>
+          <p>I’m highly skilled in tools such as Canva, HubSpot, ClickUp, Trello, and Google Sheets, allowing me to
+            streamline workflows and deliver consistent results. My approach combines creativity, organization, and a
+            deep understanding of audience behavior to ensure every post serves a purpose.</p>
           <h4>What I do best:</h4>
           <ul>
             <li>Content planning &amp; strategy</li>
@@ -98,6 +115,11 @@
             <h3>Social Media</h3>
             <p>Full-service platform management, community engagement, and growth tracking.</p>
           </div>
+          <div class="testimonial-card">
+            <div class="eyebrow">Development</div>
+            <h3>SaaS & UI/UX</h3>
+            <p>End-to-end Figma web design, Framer development, and fully functional SaaS dashboards.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -107,21 +129,24 @@
         <h2>Client Reviews</h2>
         <div class="testimonial-grid">
           <div class="testimonial-card">
-            <blockquote>"Working with Mary transformed our Instagram presence. Our engagement rose 60% in three months."</blockquote>
+            <blockquote>"Working with Mary transformed our Instagram presence. Our engagement rose 60% in three months."
+            </blockquote>
             <div class="testimonial-meta">
               <strong>Ana Cruz</strong>
               <span class="muted">Founder, Cruz Bakes</span>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"Mary created on-brand visuals that resonated with our audience. She delivered measurable growth."</blockquote>
+            <blockquote>"Mary created on-brand visuals that resonated with our audience. She delivered measurable
+              growth."</blockquote>
             <div class="testimonial-meta">
               <strong>Mark Reyes</strong>
               <span class="muted">Marketing Lead, Verde Apparel</span>
             </div>
           </div>
           <div class="testimonial-card">
-            <blockquote>"Her strategy helped us turn followers into customers. 30% uplift in online orders."</blockquote>
+            <blockquote>"Her strategy helped us turn followers into customers. 30% uplift in online orders."
+            </blockquote>
             <div class="testimonial-meta">
               <strong>Jo Santos</strong>
               <span class="muted">E‑commerce Manager, CasaLight</span>
@@ -134,7 +159,8 @@
     <section class="sublimation" id="sublimation">
       <div class="container" style="text-align: center;">
         <h2>Jersey Sublimation</h2>
-        <p class="lead" style="margin: 0 auto 2rem;">Explore my specialized jersey sublimation mockups and project files.</p>
+        <p class="lead" style="margin: 0 auto 2rem;">Explore my specialized jersey sublimation mockups and project
+          files.</p>
         <a href="portfolio_assets/Jersey_Sublimation-projects/" class="cta">View Sublimation Projects</a>
       </div>
     </section>
@@ -153,6 +179,7 @@
     <div class="container">© Mary Rose Dumada-ug</div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Assets discovered in your workspace
@@ -164,6 +191,12 @@
         "portfolio_assets/Reels/Is your home ready for hurricane season.mp4",
         "portfolio_assets/Reels/Feeling Cozy.mp4",
         "portfolio_assets/Reels/BBQ runs deep in Houston.mp4",
+        "portfolio_assets/Reels/Reels sample/sample 1.mp4",
+        "portfolio_assets/Reels/Reels sample/sample 2.mp4",
+        "portfolio_assets/Reels/Reels sample/sample 3.mp4",
+        "portfolio_assets/Reels/Reels sample/sample 4.mp4",
+        "portfolio_assets/Reels/Reels sample/sample 5 .mp4",
+        "portfolio_assets/Reels/Reels sample/sample 6.mp4",
         "portfolio_assets/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle..png",
         "portfolio_assets/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle. (1).png",
         "portfolio_assets/Graphics/May.png",
@@ -172,10 +205,83 @@
         "portfolio_assets/Graphics/JUNE 21.png",
         "portfolio_assets/Graphics/JUNE 12.png",
         "portfolio_assets/Graphics/JUNE  11.png",
-        "portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg",
         "portfolio_assets/Jersey_Sublimation-projects/1ND DESIGN ATHLETS.jpg",
-        "portfolio_assets/Jersey_Sublimation-projects/AGGIES FINAL.jpg",
         "portfolio_assets/Jersey_Sublimation-projects/2ND DESIGN BFP.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/AGGIES FINAL.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/ALINGASA WITH BACKGROUND.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/ALPA KAPA.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/APLAYA SK.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/Aunian team grade 7.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/BADMINTON.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/BEER DESIGN JPEG.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/BOSSING copy.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/BROWN red.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED JERSEY WHITE NEW.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED SPORTS JERSEY tshirt.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED SPORTS JERSEY.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED VOLEY.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED white jersey.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CED.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/CLYDE VLOG PRESENTATION.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/COLOSSIANS.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DESIGN (2).jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DESIGN copy.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DESIGN.1.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DESIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DESIGN_JPEG.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/DSIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/EAGLES DESIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/EPHESIANS.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/FETCH_2ND_PSB.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/FOR PRESEBTAION RDM.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/FUN RUN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/GANGO POLO.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/GANGO WARMER.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/GANGO design.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/GANGO.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/HOSANA SBO.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/HOSANNA.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/INDAHAG.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/JPMA copydesign.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/LEADERSHIP CAMP red.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/LEADERSHIP CAMP.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/LODI ASH ENHANCED.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/LUMBIA.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/MARON ATLEATS.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/MAYROS MOBS DESIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/MCJ DESIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/MOCKUP_DESIGN.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/MOTOBIKERS CLUBE.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/NeoWolves 32.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/ORO CULAI JPEG.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/PRESENTATION ATHLEATS SIGA.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/PSA PRESENTAION.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/aplaya office red.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/aplaya offocer.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/aunian warmer.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/baliguat.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/battle dore design.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/cheerdance RED with pink.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/cheerdance.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/desing 1 ced.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/eangles black.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/engeneer 2.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/engenerr.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/glowing sun stor copy.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/groubd instructor.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/intrated school.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/jersey design.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/languindingan.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/liceo polo.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/long sleeve racing grey.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/matampa YELLOW.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/matampa cyan.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/merschan.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/naruto.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/neo wolves warmer.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/scoreking phoenix.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/tshirt design.jpg",
         "portfolio_assets/business_cards/FRONT_COVER.jpg",
         "portfolio_assets/business_cards/INSIDE_COVER.jpg",
         "portfolio_assets/business_cards/PORTRAIT.jpg",
@@ -262,7 +368,7 @@
             item.setAttribute('data-category', i.category);
             const lower = i.path.toLowerCase();
             const ext = lower.split('.').pop().trim();
-            if (['mp4','webm','mov'].includes(ext)) {
+            if (['mp4', 'webm', 'mov'].includes(ext)) {
               const v = document.createElement('video');
               v.src = safeEncode(i.path);
               v.controls = true;
@@ -292,10 +398,12 @@
 
       // Featured projects grid (magazine-style)
       const projectsData = [
-        { title: 'Cafe Branding — Zooz Wooz', page: '#', img: 'portfolio_assets/zooz_wooz_cafe/unnamed.png', size: 'featured', tags: 'Cafe, Identity' },
+        { title: 'B2B SaaS Platform Web App', page: '#', img: 'portfolio_assets/Graphics/saas_platform_app.png', size: 'large', tags: 'SaaS, Full-Stack' },
+        { title: 'Modern SaaS Dashboard UI', page: '#', img: 'portfolio_assets/Graphics/saas_dashboard_ui.png', size: 'large', tags: 'UI/UX, Figma, Framer' },
+        { title: 'Cafe Branding — Zooz Wooz', page: '#', img: 'portfolio_assets/zooz_wooz_cafe/unnamed.png', size: 'large', tags: 'Cafe, Identity' },
         { title: 'Business Card Designs', page: 'portfolio_assets/business_cards/', img: 'portfolio_assets/business_cards/PORTRAIT.jpg', size: 'large', tags: 'Print, Branding' },
-        { title: 'Social Media Graphics', page: '#', img: 'portfolio_assets/Graphics/May (1).png', size: 'medium', tags: 'Graphics' },
-        { title: 'Jersey Sublimation', page: 'portfolio_assets/Jersey_Sublimation-projects/', img: 'portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg', size: 'medium', tags: 'Apparel' }
+        { title: 'Social Media Graphics', page: '#', img: 'portfolio_assets/Graphics/May (1).png', size: 'large', tags: 'Graphics' },
+        { title: 'Jersey Sublimation', page: 'portfolio_assets/Jersey_Sublimation-projects/', img: 'portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg', size: 'large', tags: 'Apparel' }
       ];
 
       function renderProjects() {
@@ -306,10 +414,7 @@
           const a = document.createElement('a');
           a.href = safeEncode(p.page);
           a.target = '_blank';
-          a.className = 'project-card';
-          if (p.size === 'featured') a.classList.add('featured');
-          else if (p.size === 'large') a.classList.add('span6');
-          else a.classList.add('span4');
+          a.className = 'swiper-slide project-card';
 
           const img = document.createElement('img');
           img.className = 'thumb';
@@ -326,7 +431,7 @@
           tag.style.display = 'inline-block';
           tag.textContent = p.tags;
           meta.appendChild(tag);
-          
+
           const title = document.createElement('h3');
           title.textContent = p.title;
           meta.appendChild(title);
@@ -337,6 +442,26 @@
       }
 
       renderProjects();
+      
+      const swiper = new Swiper('.projects-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+          rotate: 45,
+          stretch: -40,
+          depth: 250,
+          modifier: 1.5,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+
       renderFilters(categories);
       renderGallery('All');
 
@@ -349,7 +474,7 @@
           const parser = new DOMParser();
           const doc = parser.parseFromString(text, 'text/html');
           const anchors = Array.from(doc.querySelectorAll('a'));
-          const exts = ['png','jpg','jpeg','svg','gif','webp','mp4','mov','webm'];
+          const exts = ['png', 'jpg', 'jpeg', 'svg', 'gif', 'webp', 'mp4', 'mov', 'webm'];
           anchors.forEach(a => {
             const href = a.getAttribute('href');
             if (!href || href.endsWith('/')) return;
@@ -412,17 +537,18 @@
 
       // Override renderGallery to ensure new items also get the reveal class and observer
       const originalRenderGallery = renderGallery;
-      renderGallery = function(category) {
+      renderGallery = function (category) {
         originalRenderGallery(category);
         document.querySelectorAll('.item:not(.reveal)').forEach(el => {
           el.classList.add('reveal');
           observer.observe(el);
         });
       };
-      
+
       // Call renderGallery again to apply observer to initial items
       renderGallery('All');
     });
   </script>
 </body>
+
 </html>

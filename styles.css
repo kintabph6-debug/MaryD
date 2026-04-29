@@ -237,16 +237,23 @@ h2 {
   background: var(--white); 
 }
 
-.projects-grid { 
-  display: grid; 
-  grid-template-columns: repeat(12, 1fr); 
-  gap: 32px; 
-  margin-bottom: 64px; 
+.projects-swiper {
+  width: 100%;
+  padding-bottom: 60px;
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background: var(--primary);
 }
 
 .project-card { 
   position: relative; 
   display: block; 
+  width: 320px;
+  max-width: 75vw;
+  aspect-ratio: 3 / 4;
   overflow: hidden; 
   border-radius: var(--radius-lg); 
   background: var(--accent);
@@ -293,9 +300,7 @@ h2 {
   margin-bottom: 8px;
 }
 
-.project-card.featured { grid-column: span 8; min-height: 500px; }
-.project-card.span6 { grid-column: span 6; min-height: 400px; }
-.project-card.span4 { grid-column: span 4; min-height: 400px; }
+/* Swiper project cards are uniform in size */
 
 /* Filters */
 .filters { 
@@ -341,20 +346,21 @@ h2 {
 }
 
 .category-gallery { 
-  column-count: 3; 
-  column-gap: 32px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .category-gallery .item { 
-  display: inline-block; 
+  display: block; 
   width: 100%; 
-  margin-bottom: 32px; 
   border-radius: var(--radius-md); 
   overflow: hidden; 
   background: var(--white); 
   border: 1px solid var(--border); 
   transition: var(--transition);
   position: relative;
+  aspect-ratio: 1 / 1;
 }
 
 .category-gallery .item:hover {
@@ -365,7 +371,8 @@ h2 {
 
 .gallery img, .gallery video { 
   width: 100%; 
-  height: auto; 
+  height: 100%; 
+  object-fit: cover;
   display: block; 
 }
 
@@ -512,6 +519,10 @@ footer {
   background: var(--white);
 }
 
+.services .testimonial-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .services .testimonial-card {
   text-align: center;
   border: 1px solid var(--border);
@@ -564,10 +575,6 @@ footer .container {
 /* Responsive Design Refinements */
 @media (max-width: 1024px) {
   .hero-left h1 { font-size: 3.5rem; }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-card.featured { grid-column: span 2; }
-  .project-card.span6 { grid-column: span 1; }
-  .project-card.span4 { grid-column: span 1; }
   .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -592,7 +599,7 @@ footer .container {
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-md);
   }
-  .category-gallery { column-count: 2; }
+  .category-gallery { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
   .services .testimonial-grid { grid-template-columns: 1fr; }
   .bio ul { grid-template-columns: 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
@@ -600,7 +607,5 @@ footer .container {
 
 @media (max-width: 480px) {
   .hero-left h1 { font-size: 2.2rem; }
-  .category-gallery { column-count: 1; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card.featured { grid-column: span 1; }
+  .category-gallery { grid-template-columns: 1fr; }
 }
