@@ -42,7 +42,7 @@
         </ul>
       </div>
       <div class="hero-right">
-        <img src="assets/hero.svg" alt="Abstract red hero graphic" />
+        <img src="assets/hero_new.png" alt="Premium abstract background" />
       </div>
     </div>
   </header>
@@ -51,6 +51,7 @@
     <section class="portfolio" id="portfolio">
       <div class="container">
         <h2>Portfolio</h2>
+        <div id="projects" class="projects-grid" aria-label="Featured projects"></div>
         <div id="filters" class="filters" aria-label="Project categories"></div>
         <div id="gallery" class="gallery" aria-live="polite"></div>
       </div>
@@ -77,6 +78,67 @@
       </div>
     </section>
 
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="eyebrow">Strategy</div>
+            <h3>Content Planning</h3>
+            <p>Strategic content calendars tailored to your brand's voice and audience goals.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="eyebrow">Creative</div>
+            <h3>Reels & Graphics</h3>
+            <p>High-engagement short-form video and stunning visuals that stop the scroll.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="eyebrow">Management</div>
+            <h3>Social Media</h3>
+            <p>Full-service platform management, community engagement, and growth tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2>Client Reviews</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <blockquote>"Working with Mary transformed our Instagram presence. Our engagement rose 60% in three months."</blockquote>
+            <div class="testimonial-meta">
+              <strong>Ana Cruz</strong>
+              <span class="muted">Founder, Cruz Bakes</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <blockquote>"Mary created on-brand visuals that resonated with our audience. She delivered measurable growth."</blockquote>
+            <div class="testimonial-meta">
+              <strong>Mark Reyes</strong>
+              <span class="muted">Marketing Lead, Verde Apparel</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <blockquote>"Her strategy helped us turn followers into customers. 30% uplift in online orders."</blockquote>
+            <div class="testimonial-meta">
+              <strong>Jo Santos</strong>
+              <span class="muted">E‑commerce Manager, CasaLight</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sublimation" id="sublimation">
+      <div class="container" style="text-align: center;">
+        <h2>Jersey Sublimation</h2>
+        <p class="lead" style="margin: 0 auto 2rem;">Explore my specialized jersey sublimation mockups and project files.</p>
+        <a href="portfolio_assets/Jersey_Sublimation-projects/" class="cta">View Sublimation Projects</a>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="container">
         <h2>Contact</h2>
@@ -95,35 +157,63 @@
     document.addEventListener('DOMContentLoaded', () => {
       // Assets discovered in your workspace
       const assets = [
-        "Mary_D Reels & Graphics/Reels/May 22.mp4",
-        "Mary_D Reels & Graphics/Reels/june reel.mp4",
-        "Mary_D Reels & Graphics/Reels/july reel .mp4",
-        "Mary_D Reels & Graphics/Reels/July reel #3.mp4",
-        "Mary_D Reels & Graphics/Reels/Is your home ready for hurricane season.mp4",
-        "Mary_D Reels & Graphics/Reels/Feeling Cozy.mp4",
-        "Mary_D Reels & Graphics/Reels/BBQ runs deep in Houston.mp4",
-        "Mary_D Reels & Graphics/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle..png",
-        "Mary_D Reels & Graphics/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle. (1).png",
-        "Mary_D Reels & Graphics/Graphics/May.png",
-        "Mary_D Reels & Graphics/Graphics/May (1).png",
-        "Mary_D Reels & Graphics/Graphics/JUNE 27.png",
-        "Mary_D Reels & Graphics/Graphics/JUNE 21.png",
-        "Mary_D Reels & Graphics/Graphics/JUNE 12.png",
-        "Mary_D Reels & Graphics/Graphics/JUNE  11.png"
+        "portfolio_assets/Reels/May 22.mp4",
+        "portfolio_assets/Reels/june reel.mp4",
+        "portfolio_assets/Reels/july reel .mp4",
+        "portfolio_assets/Reels/July reel #3.mp4",
+        "portfolio_assets/Reels/Is your home ready for hurricane season.mp4",
+        "portfolio_assets/Reels/Feeling Cozy.mp4",
+        "portfolio_assets/Reels/BBQ runs deep in Houston.mp4",
+        "portfolio_assets/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle..png",
+        "portfolio_assets/Graphics/You survived everything life threw at you this year. That is proof you are stronger than any obstacle. (1).png",
+        "portfolio_assets/Graphics/May.png",
+        "portfolio_assets/Graphics/May (1).png",
+        "portfolio_assets/Graphics/JUNE 27.png",
+        "portfolio_assets/Graphics/JUNE 21.png",
+        "portfolio_assets/Graphics/JUNE 12.png",
+        "portfolio_assets/Graphics/JUNE  11.png",
+        "portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/1ND DESIGN ATHLETS.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/AGGIES FINAL.jpg",
+        "portfolio_assets/Jersey_Sublimation-projects/2ND DESIGN BFP.jpg",
+        "portfolio_assets/business_cards/FRONT_COVER.jpg",
+        "portfolio_assets/business_cards/INSIDE_COVER.jpg",
+        "portfolio_assets/business_cards/PORTRAIT.jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed.png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (1).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (2).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (3).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (4).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (5).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (6).png",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (8).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (9).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (10).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (11).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (12).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (13).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (14).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (15).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (16).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (17).jpg",
+        "portfolio_assets/zooz_wooz_cafe/unnamed (18).jpg"
       ];
 
       const gallery = document.getElementById('gallery');
       const filtersContainer = document.getElementById('filters');
 
-      const items = assets.map(p => {
+      let items = assets.map(p => {
         const normalized = p.replace(/\\\\/g, '/');
         let category = 'Other';
         if (/\/Reels\//i.test(normalized)) category = 'Reels';
         else if (/\/Graphics\//i.test(normalized)) category = 'Graphics';
+        else if (/\/Jersey_Sublimation-projects(\/|$)/i.test(normalized)) category = 'Sublimation';
+        else if (/\/business_cards\//i.test(normalized)) category = 'Business Cards';
+        else if (/\/zooz_wooz_cafe\//i.test(normalized)) category = 'Cafe Branding';
         return { path: normalized, category };
       });
 
-      const categories = ['All', ...Array.from(new Set(items.map(i => i.category)))];
+      let categories = ['All', ...Array.from(new Set(items.map(i => i.category)))];
 
       function renderFilters(categories) {
         filtersContainer.innerHTML = '';
@@ -141,46 +231,197 @@
         });
       }
 
+      // Helper to encode paths properly, handling special characters like '#' and '&'
+      function safeEncode(path) {
+        if (!path || path.startsWith('#')) return path;
+        return path.split('/').map(segment => encodeURIComponent(decodeURIComponent(segment))).join('/');
+      }
+
       function renderGallery(category) {
         gallery.innerHTML = '';
-        const filtered = (category === 'All') ? items : items.filter(i => i.category === category);
-        if (!filtered.length) {
+        // Render grouped category blocks when viewing All, otherwise render the single category
+        const catsToRender = (category === 'All') ? categories.filter(c => c !== 'All') : [category];
+        let anyRendered = false;
+        catsToRender.forEach(cat => {
+          const groupItems = items.filter(i => i.category === cat);
+          if (!groupItems.length) return;
+          anyRendered = true;
+          const block = document.createElement('div');
+          block.className = 'category-block';
+          const title = document.createElement('h3');
+          title.className = 'category-title';
+          title.textContent = cat;
+          block.appendChild(title);
+
+          const grid = document.createElement('div');
+          grid.className = 'category-gallery';
+
+          groupItems.forEach(i => {
+            const item = document.createElement('div');
+            item.className = 'item';
+            item.setAttribute('data-category', i.category);
+            const lower = i.path.toLowerCase();
+            const ext = lower.split('.').pop().trim();
+            if (['mp4','webm','mov'].includes(ext)) {
+              const v = document.createElement('video');
+              v.src = safeEncode(i.path);
+              v.controls = true;
+              v.preload = 'metadata';
+              item.appendChild(v);
+            } else {
+              const img = document.createElement('img');
+              img.src = safeEncode(i.path);
+              img.alt = '';
+              item.appendChild(img);
+            }
+            const label = document.createElement('span');
+            label.className = 'label';
+            label.textContent = i.category;
+            item.appendChild(label);
+            grid.appendChild(item);
+          });
+
+          block.appendChild(grid);
+          gallery.appendChild(block);
+        });
+
+        if (!anyRendered) {
           gallery.innerHTML = '<p class="muted">No assets in this category.</p>';
-          return;
         }
-        filtered.forEach(i => {
-          const item = document.createElement('div');
-          item.className = 'item';
-          item.setAttribute('data-category', i.category);
-          const lower = i.path.toLowerCase();
-          const ext = lower.split('.').pop().trim();
-          if (['mp4','webm','mov'].includes(ext)) {
-            const v = document.createElement('video');
-            v.src = encodeURI(i.path);
-            v.controls = true;
-            v.preload = 'metadata';
-            item.appendChild(v);
-          } else {
-            const img = document.createElement('img');
-            img.src = encodeURI(i.path);
-            img.alt = '';
-            item.appendChild(img);
-          }
-          const label = document.createElement('span');
-          label.className = 'label';
-          label.textContent = i.category;
-          item.appendChild(label);
-          gallery.appendChild(item);
+      }
+
+      // Featured projects grid (magazine-style)
+      const projectsData = [
+        { title: 'Cafe Branding — Zooz Wooz', page: '#', img: 'portfolio_assets/zooz_wooz_cafe/unnamed.png', size: 'featured', tags: 'Cafe, Identity' },
+        { title: 'Business Card Designs', page: 'portfolio_assets/business_cards/', img: 'portfolio_assets/business_cards/PORTRAIT.jpg', size: 'large', tags: 'Print, Branding' },
+        { title: 'Social Media Graphics', page: '#', img: 'portfolio_assets/Graphics/May (1).png', size: 'medium', tags: 'Graphics' },
+        { title: 'Jersey Sublimation', page: 'portfolio_assets/Jersey_Sublimation-projects/', img: 'portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg', size: 'medium', tags: 'Apparel' }
+      ];
+
+      function renderProjects() {
+        const container = document.getElementById('projects');
+        if (!container) return;
+        container.innerHTML = '';
+        projectsData.forEach((p, i) => {
+          const a = document.createElement('a');
+          a.href = safeEncode(p.page);
+          a.target = '_blank';
+          a.className = 'project-card';
+          if (p.size === 'featured') a.classList.add('featured');
+          else if (p.size === 'large') a.classList.add('span6');
+          else a.classList.add('span4');
+
+          const img = document.createElement('img');
+          img.className = 'thumb';
+          img.src = safeEncode(p.img);
+          img.alt = p.title;
+          a.appendChild(img);
+
+          const meta = document.createElement('div');
+          meta.className = 'meta';
+          const tag = document.createElement('span');
+          tag.className = 'label';
+          tag.style.position = 'static';
+          tag.style.marginBottom = '8px';
+          tag.style.display = 'inline-block';
+          tag.textContent = p.tags;
+          meta.appendChild(tag);
+          
+          const title = document.createElement('h3');
+          title.textContent = p.title;
+          meta.appendChild(title);
+          a.appendChild(meta);
+
+          container.appendChild(a);
         });
       }
 
+      renderProjects();
       renderFilters(categories);
       renderGallery('All');
+
+      // Fetch and include all files from specific folders
+      async function fetchAssets(dir, categoryName) {
+        try {
+          const res = await fetch(safeEncode(dir));
+          if (!res.ok) return;
+          const text = await res.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, 'text/html');
+          const anchors = Array.from(doc.querySelectorAll('a'));
+          const exts = ['png','jpg','jpeg','svg','gif','webp','mp4','mov','webm'];
+          anchors.forEach(a => {
+            const href = a.getAttribute('href');
+            if (!href || href.endsWith('/')) return;
+            if (href === '../') return;
+            const lower = href.toLowerCase();
+            const ext = lower.split('.').pop().trim();
+            if (exts.includes(ext)) {
+              const path = dir + href;
+              if (!assets.includes(path)) assets.push(path);
+            }
+          });
+          // recompute items and categories and re-render
+          items = assets.map(p => {
+            const normalized = p.replace(/\\\\/g, '/');
+            let category = 'Other';
+            if (/\/Reels\//i.test(normalized)) category = 'Reels';
+            else if (/\/Graphics\//i.test(normalized)) category = 'Graphics';
+            else if (/\/Jersey_Sublimation-projects(\/|$)/i.test(normalized)) category = 'Sublimation';
+            else if (/\/business_cards\//i.test(normalized)) category = 'Business Cards';
+            else if (/\/zooz_wooz_cafe\//i.test(normalized)) category = 'Cafe Branding';
+            return { path: normalized, category };
+          });
+          categories = ['All', ...Array.from(new Set(items.map(i => i.category)))];
+          renderFilters(categories);
+          renderGallery('All');
+        } catch (e) {
+          console.error('Failed to load assets from ' + dir, e);
+        }
+      }
+
+      fetchAssets('portfolio_assets/Jersey_Sublimation-projects/', 'Sublimation');
+      fetchAssets('portfolio_assets/business_cards/', 'Business Cards');
+      fetchAssets('portfolio_assets/zooz_wooz_cafe/', 'Cafe Branding');
 
       // Mobile nav toggle
       const toggle = document.querySelector('.nav-toggle');
       const links = document.querySelector('.nav-links');
       toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+
+      // Reveal animations
+      const observerOptions = {
+        threshold: 0,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Target specific elements rather than giant sections to ensure they reveal reliably
+      document.querySelectorAll('h2, .lead, .project-card, .testimonial-card, .item, .category-block').forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
+      });
+
+      // Override renderGallery to ensure new items also get the reveal class and observer
+      const originalRenderGallery = renderGallery;
+      renderGallery = function(category) {
+        originalRenderGallery(category);
+        document.querySelectorAll('.item:not(.reveal)').forEach(el => {
+          el.classList.add('reveal');
+          observer.observe(el);
+        });
+      };
+      
+      // Call renderGallery again to apply observer to initial items
+      renderGallery('All');
     });
   </script>
 </body>
