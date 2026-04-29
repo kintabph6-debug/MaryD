@@ -302,7 +302,15 @@
         "portfolio_assets/zooz_wooz_cafe/unnamed (15).jpg",
         "portfolio_assets/zooz_wooz_cafe/unnamed (16).jpg",
         "portfolio_assets/zooz_wooz_cafe/unnamed (17).jpg",
-        "portfolio_assets/zooz_wooz_cafe/unnamed (18).jpg"
+        "portfolio_assets/zooz_wooz_cafe/unnamed (18).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed.jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (1).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (2).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (3).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (4).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (5).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (6).jpg",
+        "portfolio_assets/Graduation_YearBook/unnamed (7).jpg"
       ];
 
       const gallery = document.getElementById('gallery');
@@ -316,6 +324,7 @@
         else if (/\/Jersey_Sublimation-projects(\/|$)/i.test(normalized)) category = 'Sublimation';
         else if (/\/business_cards\//i.test(normalized)) category = 'Business Cards';
         else if (/\/zooz_wooz_cafe\//i.test(normalized)) category = 'Cafe Branding';
+        else if (/\/Graduation_YearBook\//i.test(normalized)) category = 'Graduation Yearbook';
         return { path: normalized, category };
       });
 
@@ -403,7 +412,8 @@
         { title: 'Cafe Branding — Zooz Wooz', page: '#', img: 'portfolio_assets/zooz_wooz_cafe/unnamed.png', size: 'large', tags: 'Cafe, Identity' },
         { title: 'Business Card Designs', page: 'portfolio_assets/business_cards/', img: 'portfolio_assets/business_cards/PORTRAIT.jpg', size: 'large', tags: 'Print, Branding' },
         { title: 'Social Media Graphics', page: '#', img: 'portfolio_assets/Graphics/May (1).png', size: 'large', tags: 'Graphics' },
-        { title: 'Jersey Sublimation', page: 'portfolio_assets/Jersey_Sublimation-projects/', img: 'portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg', size: 'large', tags: 'Apparel' }
+        { title: 'Jersey Sublimation', page: 'portfolio_assets/Jersey_Sublimation-projects/', img: 'portfolio_assets/Jersey_Sublimation-projects/APLAYA SK purple.jpg', size: 'large', tags: 'Apparel' },
+        { title: 'Graduation Yearbook Design', page: 'portfolio_assets/Graduation_YearBook/', img: 'portfolio_assets/Graduation_YearBook/unnamed.jpg', size: 'large', tags: 'Print, Layout' }
       ];
 
       function renderProjects() {
